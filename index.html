@@ -275,7 +275,7 @@ body.rev .fade,body.rev .rc,body.rev .popsvg,body.rev .dimmable{transition-durat
   <div class="t head wrap fade" id="s7head" style="left:130px;top:-432px;width:790px;font-size:48px">Mipymes con empleados que cobran por <span class="unit">QR, llave o transferencia.</span></div>
   <div class="t lg fade" id="s7l0" style="left:130px;top:-200px"><b style="background:var(--blue);opacity:.35"></b><div><div class="k">TAM · Colombia</div><div class="tx">~540.000 mipymes con 2+ empleados</div></div></div>
   <div class="t lg fade" id="s7l1" style="left:130px;top:-20px"><b style="background:var(--blue)"></b><div><div class="k">SAM · Área Metropolitana</div><div class="tx">~52.000 negocios en el Valle de Aburrá</div></div></div>
-  <div class="t lg fade" id="s7l2" style="left:130px;top:160px"><b style="background:var(--green)"></b><div><div class="k" style="color:var(--green)">SOM · Valle de Aburrá, a 3 años</div><div class="tx">meta: <span class="grn">5.000 negocios</span> · año 1: 500</div></div></div>
+  <div class="t lg fade" id="s7l2" style="left:130px;top:160px"><b style="background:var(--green)"></b><div><div class="k" style="color:var(--green)">SOM · Colombia, por canales digitales y aliados</div><div class="tx">meta: <span class="grn">5.000 negocios</span> a 3 años · ~1% del TAM</div></div></div>
   <div class="t foot fade" id="s7foot" style="left:130px;top:430px;width:560px">Fuentes: RUES 2025 (1,8 M mipymes activas), BanRep (Bre-B 2026). Supuestos: 30% con 2+ empleados que cobran por QR · 260 comprobantes/mes × $89 = $277.680 por negocio al año · TRM $3.900.</div>
 </div>
 
@@ -331,11 +331,8 @@ body.rev .fade,body.rev .rc,body.rev .popsvg,body.rev .dimmable{transition-durat
   <div class="t eyebrow fade" id="sreye" style="left:-830px;top:-470px">Roadmap</div>
   <div class="t head fade" id="srhead" style="left:-830px;top:-430px">Hoy verificamos el pago.<br><span class="unit">Mañana lo originamos, con la banca.</span></div>
   <div class="t fade" id="src0" style="left:-830px;top:-120px"><div class="k">Hoy</div><div class="pt" style="font-size:40px">Verificar y conciliar</div><div class="ps" style="width:500px;font-size:27px">Comprobante por WhatsApp, cruzado con el correo del banco.</div></div>
-  <div class="t" style="left:-830px;top:140px"><div class="pill s fade" id="srp0"><i></i>Medellín</div></div>
   <div class="t fade" id="src1" style="left:-230px;top:-120px"><div class="k">2027 · Open Finance</div><div class="pt" style="font-size:40px">Verificar en la cuenta</div><div class="ps" style="width:500px;font-size:27px">Conexión directa a la banca, con permiso del negocio.</div></div>
-  <div class="t" style="left:-230px;top:140px"><div class="pill s fade" id="srp1"><i></i>Valle de Aburrá</div></div>
   <div class="t fade" id="src2" style="left:370px;top:-120px"><div class="k">2028 · Cobrar</div><div class="pt" style="font-size:40px">QR Bre-B propio</div><div class="ps" style="width:500px;font-size:27px">El negocio cobra desde su cuenta y el pago llega ya conciliado.</div></div>
-  <div class="t" style="left:370px;top:140px"><div class="pill s fade" id="srp2"><i></i>Bogotá y Cali</div></div>
 </div>
 
 <!-- 9 · Equipo y cierre -->
@@ -546,7 +543,7 @@ const STEPS=[
    F('sgc0','c1+1200'),F('sgc1','c1+2000'),F('sgc2','c1+2800')],
   say:'«¿Cómo llegamos a ellos? Tres canales. Orgánico: con SEO y posicionamiento en IA pasamos de 70 a 4.400 impresiones por semana en 15 días. Venta directa: de Instagram al WhatsApp del dueño. Y aliados como Promesa y Orvyz.»'},
  {cam:['sr',0,0,1920],t:'2:16 – 2:27',acts:[D('cgr','c.95'),F('sreye','c.6'),F('srhead','c.65'),D('srline',2000,'c.9'),
-   ...[0,1,2].flatMap(i=>{const x=[-816,-216,384][i],q=(900-x)/1800;return[F('srn'+i,at('c.9',pass(2000,q))),F('src'+i,'c1+'+(1700+i*350)),F('srp'+i,'c1+'+(1850+i*350))]})],
+   ...[0,1,2].flatMap(i=>{const x=[-816,-216,384][i],q=(900-x)/1800;return[F('srn'+i,at('c.9',pass(2000,q))),F('src'+i,'c1+'+(1700+i*350))]})],
   say:'«Hoy verificamos y conciliamos. En 2027, Open Finance con la banca. Y en 2028, cobro con QR Bre-B, con el pago ya conciliado.»'},
  {cam:['s9',0,0,1920],t:'2:27 – 2:45',acts:[D('cr9','c.95'),F('s9eye','c.6'),F('s9head','c.65'),D('s9circle',1600,'c.92'),
    F('s9f0','c.9+300'),F('s9f1','c.9+500'),F('s9f2','c.9+700'),F('s9ask','c1+1400'),
