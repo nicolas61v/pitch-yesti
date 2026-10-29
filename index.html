@@ -370,8 +370,8 @@ body.rev .fade,body.rev .rc,body.rev .popsvg,body.rev .dimmable{transition-durat
 <div class="vignette"></div>
 <div id="bar"></div>
 <div id="count">01 / 09</div>
-<div id="hint"><b>→</b> siguiente diapo · <b>←</b> volver · <b>N</b> guion · <b>F</b> pantalla completa · <b>O</b> vista general · <b>T</b> cronómetro</div>
-<div id="timer"><span id="tClock">00:00</span><span class="tt">/ 3:00</span><i id="tBar"></i></div>
+<div id="hint"><b>→</b> siguiente diapo · <b>←</b> volver · <b>N</b> guion · <b>F</b> pantalla completa · <b>O</b> vista general · <b>T</b> cronómetro · <b>A</b> automático · <b>R</b> reiniciar</div>
+<div id="timer"><span id="tClock">00:00</span><span class="tt">/ 3:00</span><span class="tt" id="tAuto"></span><i id="tBar"></i></div>
 <div id="notes"><div class="nh"><span id="nSlide"></span><span id="nTime"></span><span id="nClock">00:00</span></div><div id="nNow"></div><div id="nNext"></div></div>
 
 <script>
@@ -540,24 +540,24 @@ const STEPS=[
    ...TX.map((x,i)=>F('s8t'+i,at('c.9',pass(S8,(900-x)/1800)))),
    F('s8c0','c1+700'),F('s8c1','c1+1100'),F('s8c2','c1+1500'),F('s8c3','c1+1900'),F('s8band','c1+2800'),F('s8foot','c1+3200')],
   say:'«Cobramos 89 pesos por comprobante y procesarlo nos cuesta 22: 75% de margen bruto. Cada negocio nos deja 17.400 pesos al mes. Con 23 clientes cubrimos la operación, y cada cliente se paga en menos de seis meses: nos devuelve tres veces y media lo que cuesta traerlo.»'},
- {cam:['sg',0,0,1920],t:'1:53 – 2:21',acts:[D('c8g','c.95'),F('sgeye','c.6'),F('sghead','c.65'),F('sgs0','c.85'),F('sgs1','c.85+200'),
+ {cam:['sg',0,0,1920],t:'1:53 – 2:12',acts:[D('c8g','c.95'),F('sgeye','c.6'),F('sghead','c.65'),F('sgs0','c.85'),F('sgs1','c.85+200'),
    D('sgline',1800,'c.9'),D('sgbase',900,'c.9'),F('sga0','c.9+100'),F('sga1','c.9+300'),F('sga2','c.9+500'),D('sgchart',SG,'c1+200'),
    F('sgn0','c1+200'),F('sgv0','c1+250'),F('sgn1',at('c1',200+pass(SG,.5))),F('sgv1',at('c1',250+pass(SG,.5))),F('sgn2',at('c1',200+SG)),F('sgv2',at('c1',250+SG)),
    F('sgc0','c1+1200'),F('sgc1','c1+2000'),F('sgc2','c1+2800')],
-  say:'«¿Cómo llegamos a ellos? Tres canales. Uno, orgánico: con SEO y posicionamiento en inteligencia artificial pasamos en 15 días de 70 a 4.400 impresiones por semana, y ya nos escriben negocios que nos encontraron por ChatGPT. Dos, venta directa: de Instagram al WhatsApp del dueño, con propuesta y demo. Y tres, aliados como Promesa, Orvyz y la Plaza de Wein, que nos llevan a muchos negocios a la vez.»'},
- {cam:['sr',0,0,1920],t:'2:21 – 2:39',acts:[D('cgr','c.95'),F('sreye','c.6'),F('srhead','c.65'),D('srline',2000,'c.9'),
+  say:'«¿Cómo llegamos a ellos? Tres canales. Orgánico: con SEO y posicionamiento en IA pasamos de 70 a 4.400 impresiones por semana en 15 días. Venta directa: de Instagram al WhatsApp del dueño. Y aliados como Promesa y Orvyz.»'},
+ {cam:['sr',0,0,1920],t:'2:12 – 2:27',acts:[D('cgr','c.95'),F('sreye','c.6'),F('srhead','c.65'),D('srline',2000,'c.9'),
    ...[0,1,2].flatMap(i=>{const x=[-816,-216,384][i],q=(900-x)/1800;return[F('srn'+i,at('c.9',pass(2000,q))),F('src'+i,'c1+'+(1700+i*350)),F('srp'+i,'c1+'+(1850+i*350))]})],
-  say:'«¿Hacia dónde vamos? Hoy verificamos y conciliamos. En 2027 nos conectamos a la banca por Open Finance para verificar directo contra la cuenta. Y en 2028 damos el salto: cobrar con QR Bre-B desde la cuenta del propio negocio, para que el pago llegue ya conciliado.»'},
- {cam:['s9',0,0,1920],t:'2:39 – 2:58',acts:[D('cr9','c.95'),F('s9eye','c.6'),F('s9head','c.65'),D('s9circle',1600,'c.92'),
+  say:'«Hoy verificamos y conciliamos. En 2027 nos conectamos a la banca por Open Finance. Y en 2028 cobramos con QR Bre-B, para que el pago llegue ya conciliado.»'},
+ {cam:['s9',0,0,1920],t:'2:27 – 2:45',acts:[D('cr9','c.95'),F('s9eye','c.6'),F('s9head','c.65'),D('s9circle',1600,'c.92'),
    F('s9f0','c.9+300'),F('s9f1','c.9+500'),F('s9f2','c.9+700'),F('s9ask','c1+1400'),
    F('s9fill','c.92+1650'),F('s9word','c.92+1950'),F('s9close','c1+3000')],
-  say:'«Somos Sebastián, nuestro CTO, y yo, con Juliana como mentora en finanzas y fintech. Buscamos 50 millones para acelerar nuestra entrada al mercado con más fuerza comercial, y alianzas con la banca. (pausa) Soy Nicolás… (clic) y esto es Yesti.»'},
+  say:'«Somos Sebastián, yo y Juliana, nuestra mentora. Buscamos 50 millones para crecer en ventas y alianzas con la banca. (pausa) Soy Nicolás… (clic) y esto es Yesti.»'},
  {cam:['w',4300,1150,9400],sp:.5,t:'Cierre',acts:[...['s1','s2','s5','s6','s7','s8','sg','sr','s9','wl'].map(id=>M(id,0)),
    D('c9f','c.95'),D('finC',900,'c.95'),F('finD','c.95+825'),...(()=>{const L=FO.map(id=>$(id)._L),T=L.reduce((a,b)=>a+b);let acc=0;return FO.map((id,i)=>{const a={t:'draw',id,dur:1700*L[i]/T,delay:'c.95+'+Math.round(1100+1700*acc/T),lin:1};acc+=L[i];return a})})(),
    F('finN','c.95+2825'),F('finF','c.95+2975'),M('finOutG','c.95+3125'),F('finT','c.95+3275')],
   say:'(El punto dibuja el logo. Quédate en silencio, mira al público y espera preguntas.)'},
 ];
-const LIMIT=[0,15,38,65,77,91,113,141,159,178,190];
+const LIMIT=[0,15,38,65,77,91,113,132,147,165,180];
 const REG=[];STEPS.forEach((s,k)=>s.acts.forEach(a=>{const e=$(a.id);if(!e)console.error('falta',a.id);REG.push({...a,step:k,el:e})}));
 const resolve=(v,c)=>{if(typeof v==='number')return v;const m=/^c([\d.]+)(?:\+(-?[\d.]+))?$/.exec(v);return c*parseFloat(m[1])+(m[2]?+m[2]:0)};
 const camFor=k=>{for(let i=k;i>=0;i--)if(STEPS[i].cam)return camOf(STEPS[i].cam)};
@@ -587,7 +587,7 @@ function go(k){
   clearTimeout(window.__penT);pen.classList.remove('off');if(k===STEPS.length-1)window.__penT=setTimeout(()=>pen.classList.add('off'),c*.95+3125);
   if(k===0)t0=null;
   if(k>0&&t0===null)t0=performance.now();
-  ui();
+  ui();sched();
 }
 /* demo: los dos videos en secuencia al llegar a la diapo 5 */
 const DEMO=3,va=$('v5a'),vb=$('v5b'),ph2=$('phf2');let demoT=null;
@@ -615,6 +615,8 @@ addEventListener('keydown',e=>{
   if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(k)){e.preventDefault();overview?setOverview(false):go(cur+1)}
   else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();overview?setOverview(false):go(cur-1)}
   else if(k==='Home')go(0);
+  else if(k==='a'||k==='A'){auto=!auto;$('timer').classList.add('show');sched();autoUI()}
+  else if(k==='r'||k==='R'){auto=true;$('timer').classList.add('show');$('notes').classList.add('show');go(0);autoUI()}
   else if(k==='n'||k==='N')$('notes').classList.toggle('show');
   else if(k==='t'||k==='T')$('timer').classList.toggle('show');
   else if(k==='f'||k==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
@@ -628,6 +630,13 @@ let idle;addEventListener('mousemove',()=>{document.body.style.cursor='';clearTi
 addEventListener('resize',()=>{lastT='';applyCam()});
 setTimeout(()=>$('hint').classList.add('off'),5500);
 
+/* modo automático: cada diapo dura lo que marca el guion */
+var auto=false,autoT=null;
+function sched(){clearTimeout(autoT);if(!auto)return;
+  if(cur>=STEPS.length-1){auto=false;autoUI();return}
+  const d=cur===0?1500:Math.max(4000,(LIMIT[cur]-LIMIT[cur-1])*1000);
+  autoT=setTimeout(()=>go(cur+1),d)}
+function autoUI(){const e=$('tAuto');if(e)e.textContent=auto?'· AUTO':''}
 cam=camFor(0);applyState(0,false,0);ui();requestAnimationFrame(frame);
 window.__go=go;
 })();
