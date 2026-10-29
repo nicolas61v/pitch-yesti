@@ -612,8 +612,8 @@ addEventListener('keydown',e=>{
   if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(k)){e.preventDefault();overview?setOverview(false):go(cur+1)}
   else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();overview?setOverview(false):go(cur-1)}
   else if(k==='Home')go(0);
-  else if(k==='a'||k==='A'){auto=!auto;$('timer').classList.add('show');sched();autoUI()}
-  else if(k==='r'||k==='R'){auto=true;$('timer').classList.add('show');$('notes').classList.add('show');go(0);autoUI()}
+  else if(k==='a'||k==='A'){auto=!auto;sched();autoUI()}
+  else if(k==='r'||k==='R'){auto=true;go(0);autoUI()}
   else if(k==='n'||k==='N')$('notes').classList.toggle('show');
   else if(k==='t'||k==='T')$('timer').classList.toggle('show');
   else if(k==='f'||k==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}
